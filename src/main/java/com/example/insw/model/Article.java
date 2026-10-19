@@ -1,14 +1,20 @@
-
 package com.example.insw.model;
 
 import com.example.insw.Calculator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Article {
 
     private String name;
     private int quantity;
+
+    @JsonProperty("unitPrice")
     private double price;
+
     private double discount;
+
+    public Article() {
+}
 
     public Article(String name, int quantity, double price, double discount) {
         this.name = name;
